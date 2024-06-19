@@ -16,15 +16,108 @@ public class ProfileWindow extends JFrame {
 
     private static final Map<String, FoodNutrition> FOOD_NUTRITION_MAP = new HashMap<>();
 
+
     static {
-        // Initialize the nutrition data for different foods (per 100 grams)
         FOOD_NUTRITION_MAP.put("Apple", new FoodNutrition(52, 0.3));
         FOOD_NUTRITION_MAP.put("Banana", new FoodNutrition(89, 1.1));
         FOOD_NUTRITION_MAP.put("Chicken", new FoodNutrition(239, 27.3));
         FOOD_NUTRITION_MAP.put("Rice", new FoodNutrition(130, 2.7));
-        // Add more food items as needed
-    }
+        FOOD_NUTRITION_MAP.put("Almonds", new FoodNutrition(579, 21.2));
+        FOOD_NUTRITION_MAP.put("Beef", new FoodNutrition(250, 26.1));
+        FOOD_NUTRITION_MAP.put("Broccoli", new FoodNutrition(34, 2.8));
+        FOOD_NUTRITION_MAP.put("Carrot", new FoodNutrition(41, 0.9));
+        FOOD_NUTRITION_MAP.put("Cheese", new FoodNutrition(402, 25.0));
+        FOOD_NUTRITION_MAP.put("Egg", new FoodNutrition(155, 13.0));
+        FOOD_NUTRITION_MAP.put("Fish", new FoodNutrition(206, 22.1));
+        FOOD_NUTRITION_MAP.put("Grapes", new FoodNutrition(69, 0.7));
+        FOOD_NUTRITION_MAP.put("Milk", new FoodNutrition(42, 3.4));
+        FOOD_NUTRITION_MAP.put("Orange", new FoodNutrition(47, 0.9));
+        FOOD_NUTRITION_MAP.put("Peanut Butter", new FoodNutrition(588, 25.1));
+        FOOD_NUTRITION_MAP.put("Potato", new FoodNutrition(77, 2.0));
+        FOOD_NUTRITION_MAP.put("Spinach", new FoodNutrition(23, 2.9));
+        FOOD_NUTRITION_MAP.put("Tomato", new FoodNutrition(18, 0.9));
+        FOOD_NUTRITION_MAP.put("Yogurt", new FoodNutrition(59, 10.0));
+        FOOD_NUTRITION_MAP.put("Avocado", new FoodNutrition(160, 2.0));
+        FOOD_NUTRITION_MAP.put("Blueberries", new FoodNutrition(57, 0.7));
+        FOOD_NUTRITION_MAP.put("Bread", new FoodNutrition(265, 9.0));
+        FOOD_NUTRITION_MAP.put("Butter", new FoodNutrition(717, 0.9));
+        FOOD_NUTRITION_MAP.put("Cashews", new FoodNutrition(553, 18.2));
+        FOOD_NUTRITION_MAP.put("Celery", new FoodNutrition(16, 0.7));
+        FOOD_NUTRITION_MAP.put("Cherries", new FoodNutrition(50, 1.0));
+        FOOD_NUTRITION_MAP.put("Corn", new FoodNutrition(86, 3.2));
+        FOOD_NUTRITION_MAP.put("Cucumber", new FoodNutrition(16, 0.7));
+        FOOD_NUTRITION_MAP.put("Dates", new FoodNutrition(282, 2.5));
+        FOOD_NUTRITION_MAP.put("Garlic", new FoodNutrition(149, 6.4));
+        FOOD_NUTRITION_MAP.put("Honey", new FoodNutrition(304, 0.3));
+        FOOD_NUTRITION_MAP.put("Kale", new FoodNutrition(49, 4.3));
+        FOOD_NUTRITION_MAP.put("Lettuce", new FoodNutrition(15, 1.4));
+        FOOD_NUTRITION_MAP.put("Mango", new FoodNutrition(60, 0.8));
+        FOOD_NUTRITION_MAP.put("Mushrooms", new FoodNutrition(22, 3.1));
+        FOOD_NUTRITION_MAP.put("Oats", new FoodNutrition(389, 16.9));
+        FOOD_NUTRITION_MAP.put("Olives", new FoodNutrition(115, 0.8));
+        FOOD_NUTRITION_MAP.put("Onion", new FoodNutrition(40, 1.1));
+        FOOD_NUTRITION_MAP.put("Peas", new FoodNutrition(81, 5.4));
+        FOOD_NUTRITION_MAP.put("Pineapple", new FoodNutrition(50, 0.5));
+        FOOD_NUTRITION_MAP.put("Pumpkin", new FoodNutrition(26, 1.0));
+        FOOD_NUTRITION_MAP.put("Raspberries", new FoodNutrition(52, 1.2));
+        FOOD_NUTRITION_MAP.put("Strawberries", new FoodNutrition(32, 0.7));
+        FOOD_NUTRITION_MAP.put("Sweet Potato", new FoodNutrition(86, 1.6));
+        FOOD_NUTRITION_MAP.put("Turkey", new FoodNutrition(189, 28.0));
+        FOOD_NUTRITION_MAP.put("Walnuts", new FoodNutrition(654, 15.2));
+        FOOD_NUTRITION_MAP.put("Watermelon", new FoodNutrition(30, 0.6));
+        FOOD_NUTRITION_MAP.put("Zucchini", new FoodNutrition(17, 1.2));
+        FOOD_NUTRITION_MAP.put("Aloo Gobi", new FoodNutrition(65, 2.5));
+        FOOD_NUTRITION_MAP.put("Baingan Bharta", new FoodNutrition(102, 3.5));
+        FOOD_NUTRITION_MAP.put("Bhindi Masala", new FoodNutrition(80, 2.1));
+        FOOD_NUTRITION_MAP.put("Butter Chicken", new FoodNutrition(240, 12.0));
+        FOOD_NUTRITION_MAP.put("Chana Masala", new FoodNutrition(180, 6.0));
+        FOOD_NUTRITION_MAP.put("Dal Makhani", new FoodNutrition(174, 7.6));
+        FOOD_NUTRITION_MAP.put("Fish Curry", new FoodNutrition(140, 15.0));
+        FOOD_NUTRITION_MAP.put("Kadai Paneer", new FoodNutrition(240, 10.0));
+        FOOD_NUTRITION_MAP.put("Malai Kofta", new FoodNutrition(220, 7.0));
+        FOOD_NUTRITION_MAP.put("Mutter Paneer", new FoodNutrition(150, 6.0));
+        FOOD_NUTRITION_MAP.put("Palak Paneer", new FoodNutrition(150, 8.0));
+        FOOD_NUTRITION_MAP.put("Rajma", new FoodNutrition(140, 7.0));
+        FOOD_NUTRITION_MAP.put("Tandoori Chicken", new FoodNutrition(150, 16.0));
+        FOOD_NUTRITION_MAP.put("Biryani", new FoodNutrition(200, 6.0));
+        FOOD_NUTRITION_MAP.put("Roti", new FoodNutrition(110, 3.0));
+        FOOD_NUTRITION_MAP.put("Naan", new FoodNutrition(270, 9.0));
+        FOOD_NUTRITION_MAP.put("Puri", new FoodNutrition(300, 6.0));
+        FOOD_NUTRITION_MAP.put("Samosa", new FoodNutrition(260, 6.0));
+        FOOD_NUTRITION_MAP.put("Vada Pav", new FoodNutrition(290, 7.0));
+        FOOD_NUTRITION_MAP.put("Dosa", new FoodNutrition(170, 3.9));
+        FOOD_NUTRITION_MAP.put("Idli", new FoodNutrition(58, 1.6));
+        FOOD_NUTRITION_MAP.put("Upma", new FoodNutrition(200, 5.0));
+        FOOD_NUTRITION_MAP.put("Poha", new FoodNutrition(130, 2.0));
+        FOOD_NUTRITION_MAP.put("Pav Bhaji", new FoodNutrition(250, 4.5));
+        FOOD_NUTRITION_MAP.put("Pongal", new FoodNutrition(205, 4.4));
+        FOOD_NUTRITION_MAP.put("Rasam", new FoodNutrition(40, 2.0));
+        FOOD_NUTRITION_MAP.put("Sambar", new FoodNutrition(150, 4.0));
+        FOOD_NUTRITION_MAP.put("Chole Bhature", new FoodNutrition(450, 10.0));
+        FOOD_NUTRITION_MAP.put("Paneer Tikka", new FoodNutrition(260, 17.0));
+        FOOD_NUTRITION_MAP.put("Aloo Paratha", new FoodNutrition(220, 5.0));
+        FOOD_NUTRITION_MAP.put("Gulab Jamun", new FoodNutrition(175, 2.5));
+        FOOD_NUTRITION_MAP.put("Jalebi", new FoodNutrition(150, 1.0));
+        FOOD_NUTRITION_MAP.put("Kheer", new FoodNutrition(120, 3.0));
+        FOOD_NUTRITION_MAP.put("Lassi", new FoodNutrition(150, 5.0));
+        FOOD_NUTRITION_MAP.put("Mango Lassi", new FoodNutrition(160, 4.0));
+        FOOD_NUTRITION_MAP.put("Masala Chai", new FoodNutrition(60, 1.0));
+        FOOD_NUTRITION_MAP.put("Mysore Pak", new FoodNutrition(560, 6.0));
+        FOOD_NUTRITION_MAP.put("Paneer Butter Masala", new FoodNutrition(200, 8.0));
+        FOOD_NUTRITION_MAP.put("Pulao", new FoodNutrition(160, 3.0));
+        FOOD_NUTRITION_MAP.put("Raita", new FoodNutrition(60, 2.0));
+        FOOD_NUTRITION_MAP.put("Saag", new FoodNutrition(100, 4.0));
+        FOOD_NUTRITION_MAP.put("Sev Puri", new FoodNutrition(250, 5.0));
+        FOOD_NUTRITION_MAP.put("Shahi Paneer", new FoodNutrition(300, 10.0));
+        FOOD_NUTRITION_MAP.put("Veg Korma", new FoodNutrition(150, 4.0));
+        FOOD_NUTRITION_MAP.put("Veg Pakora", new FoodNutrition(250, 5.0));
+        FOOD_NUTRITION_MAP.put("Masoor Dal", new FoodNutrition(116, 9.0));
+        FOOD_NUTRITION_MAP.put("Tamarind Rice", new FoodNutrition(165, 3.0));
+        FOOD_NUTRITION_MAP.put("Medu Vada", new FoodNutrition(250, 8.0));
+        FOOD_NUTRITION_MAP.put("Sabudana Khichdi", new FoodNutrition(200, 2.0));
 
+    }
+    
     public ProfileWindow(String[] userData) {
         // Set up the profile window
         setTitle("Profile: " + userData[0]); // First element is the name
